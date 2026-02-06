@@ -4,6 +4,7 @@ from pages.base_page import BasePage
 from locators.main_page_locators import MainPageLocators
 from locators.base_page_locators import BasePageLocators
 
+
 #класс содержит методы главной страницы и наследует базовые методы
 class MainPage(BasePage):
 
