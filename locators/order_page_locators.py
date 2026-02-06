@@ -24,12 +24,12 @@ class OrderPageLocators:   # класс содержит локаторы стр
     #поле "Когда привезти самокат"
     field_date_locator = By.XPATH, "//input[@placeholder='* Когда привезти самокат']"
     # выбор даты когда привезти самокат из выпадающего календаря
-    choose_rent_day_locator = By.XPATH, f"//div[contains(@aria-label, '{day_str}-е мая 2025')]"
+    choose_rent_day_locator = By.XPATH, f"//div[contains(@aria-label, '{day_str}-е февраля 2026')]"
     #поле "Срок аренды"
     field_rental_period_locator = By.XPATH, "//div[contains(@class, 'Dropdown-placeholder') and text()='* Срок аренды']"
     # выбор срока аренды из выпадающего списка
     choose_rent_period_locator = By.XPATH, ".//div[text()='трое суток']"
-    #выбор цвета самоката "чёрный жемчуг"
+    #выбор цвета самоката
     choose_black_color_locator = (By.ID, "black")
     #поле "Комментарий"
     field_comment_locator = By.XPATH, "//input[@placeholder='Комментарий для курьера']"
