@@ -1,8 +1,7 @@
 import allure
-#from pages.main_page import MainPage
-#from pages.order_page import OrderPage
 from data import User, order_confirm
 from urls import Urls
+from pages.order_page import BasePage
 
 
 class TestOrderPage:
