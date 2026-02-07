@@ -13,16 +13,14 @@ class MainPage(BasePage):
 
 #кликаем на вопрос
     @allure.step('Кликаем на вопрос')
-    def click_to_question(self, num):
-         question_locator = self.format_locator(MainPageLocators.question_locator, num)
-         self.scroll_to_element(MainPageLocators.last_question_locator_to_scroll)
-         self.click_to_element(question_locator)
+    def click_on_faq(self, question_number):
+         self.scroll_to_element(MainPageLocators.FAQ_QUESTIONS[question_number])
+         self.click_to_element(MainPageLocators.FAQ_QUESTIONS[question_number])
 
 #получаем текст ответа
     @allure.step('Получаем текст ответа')
-    def get_answer_text(self, num):
-         answer_locator = self.format_locator(MainPageLocators.answer_locator, num)
-         return self.get_text_from_element(answer_locator)
+    def get_faq_text_answers(self, answer_number):
+        return self.get_text_from_element(MainPageLocators.FAQ_ANSWERS[answer_number])
 
 #принятие куки, клик по кнопке "Заказать" в теле на главной странице
     @allure.step('Переход в форме заказа при клике кнопки "Заказать" в теле на главной странице')
