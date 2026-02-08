@@ -1,6 +1,7 @@
 import allure
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
+from locators.base_page_locators import BasePageLocators
 
 #класс содержит базовые методы
 class BasePage:
@@ -57,3 +58,13 @@ class BasePage:
     @allure.step('Открываем переданную страницу')
     def go_to_url(self, url):
         self.driver.get(url)
+
+#метод получает текущий url
+    @allure.step('Проверка URL')
+    def check_to_url(self):
+        return self.driver.current_url
+
+    @allure.step('Проверяем переход на страницу Дзен')
+    def switch_to_dzen_page(self):
+        self.switch_and_get_url()
+        return self.find_element(BasePageLocators.check_yandex_dzen)
