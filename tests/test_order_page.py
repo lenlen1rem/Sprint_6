@@ -41,4 +41,4 @@ class TestOrderPage:
         order_page.getting_the_order_status()
         order_page.click_on_the_yandex_logo()
         order_page.switch_and_get_url()
-        assert main_page.switch_to_dzen_page
+        assert main_page.switch_to_dzen_page()
